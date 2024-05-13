@@ -7,7 +7,7 @@ if [[ $@ = *"--raw"* ]]; then
   RAWTAG="--raw"
 fi
 if [ ! -d "data/all_data" ] || [ ! "$(ls -A data/all_data)" ]; then
-    cd preprocess
+    cd /kaggle/working/leaf/data/shakespeare/preprocess
     ./data_to_json.sh $RAWTAG
     cd ..
 fi
